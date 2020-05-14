@@ -3,7 +3,7 @@ function! DetectYamlOpenapi()
   while linenr < 30
     let linenr += 1
     if getline(linenr) =~ 'openapi:\s\+.*\d\+\.\d\+\.\d\+.*'
-      set filetype=openapi
+      set filetype=openapi.yaml
       break
     endif
   endwhile
@@ -14,7 +14,7 @@ function! DetectJsonOpenapi()
   while linenr < 30
     let linenr += 1
     if getline(linenr) =~ '"swagger":\s\+"\d\+\.\d\+"'
-      set filetype=openapi
+      set filetype=openapi.json
       break
     endif
   endwhile
